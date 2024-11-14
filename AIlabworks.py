@@ -194,55 +194,55 @@
 
 #7. Write a python program to find the maximum score that the maximizing player can get using Minimax Algorithm.
 
-def minimax(node, is_maximizing_player):
+# def minimax(node, is_maximizing_player):
 
-    if not node['children']:  # If no children, it's a leaf node
-        return node['value']
+#     if not node['children']:  # If no children, it's a leaf node
+#         return node['value']
     
-    if is_maximizing_player:
-        best_value = float('-inf')
-        for child in node['children']:
-            value = minimax(child, False)  # Call minimax for the minimizing player
-            best_value = max(best_value, value)  # Choose the maximum value
-        return best_value
-    else:
-        best_value = float('inf')
-        for child in node['children']:
-            value = minimax(child, True)  # Call minimax for the maximizing player
-            best_value = min(best_value, value)  # Choose the minimum value
-        return best_value
+#     if is_maximizing_player:
+#         best_value = float('-inf')
+#         for child in node['children']:
+#             value = minimax(child, False)  # Call minimax for the minimizing player
+#             best_value = max(best_value, value)  # Choose the maximum value
+#         return best_value
+#     else:
+#         best_value = float('inf')
+#         for child in node['children']:
+#             value = minimax(child, True)  # Call minimax for the maximizing player
+#             best_value = min(best_value, value)  # Choose the minimum value
+#         return best_value                                                    
 
 
-game_tree = {
-    'value': None, 
-    'children': [
-        {
-            'value': None,
-            'children': [
-                {'value': 14, 'children': []},  # Leaf node
-                {'value': 6, 'children': []},   # Leaf node
-                {'value': 8, 'children': []}    # Leaf node
-            ]
-        },
-        {
-            'value': None,
-            'children': [
-                {'value': 7, 'children': []},   # Leaf node
-                {'value': 3, 'children': []},   # Leaf node
-                {'value': 15, 'children': []}   # Leaf node
-            ]
-        },
-        {
-            'value': None,
-            'children': [
-                {'value': 20, 'children': []},  # Leaf node
-                {'value': 5, 'children': []},   # Leaf node
-                {'value': 12, 'children': []}   # Leaf node
-            ]
-        }
-    ]
-}
+# game_tree = {
+#     'value': None, 
+#     'children': [
+#         {
+#             'value': None,
+#             'children': [
+#                 {'value': 14, 'children': []},  # Leaf node
+#                 {'value': 6, 'children': []},   # Leaf node
+#                 {'value': 8, 'children': []}    # Leaf node
+#             ]
+#         },
+#         {
+#             'value': None,
+#             'children': [
+#                 {'value': 7, 'children': []},   # Leaf node
+#                 {'value': 3, 'children': []},   # Leaf node
+#                 {'value': 15, 'children': []}   # Leaf node
+#             ]
+#         },
+#         {
+#             'value': None,
+#             'children': [
+#                 {'value': 20, 'children': []},  # Leaf node
+#                 {'value': 5, 'children': []},   # Leaf node
+#                 {'value': 12, 'children': []}   # Leaf node
+#             ]
+#         }
+#     ]
+# }
 
-max_score = minimax(game_tree, True) 
+# max_score = minimax(game_tree, True) 
 
-print(f"The maximum score that the maximizing player can get is: {max_score}")
+# print(f"The maximum score that the maximizing player can get is: {max_score}")
